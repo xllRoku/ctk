@@ -5,12 +5,13 @@ ul.navbar-desktop {
 
   @include mx.breakpoint(large) {
     display: flex;
-    padding: 2rem clamp(2rem, calc(-26.12rem + 37.5vw), 7.63rem);
+    padding: 1rem clamp(2rem, calc(-26.12rem + 37.5vw), 7.63rem);
     justify-content: space-between;
   }
 
   div.container-logo-desktop {
     width: 4rem;
+    cursor: pointer;
   }
 }
 
@@ -29,9 +30,10 @@ div.container-navbar-desktop {
     li.links-desktop {
       margin: 0 0.5rem;
 
-      a.link-desktop {
+      p.link-desktop {
         font-weight: 500;
         transition: border-bottom 50ms;
+        cursor: pointer;
       }
     }
   }
@@ -44,19 +46,19 @@ div.container-navbar-desktop {
         margin: 0 0.5rem;
       }
 
-      a.account svg,
-      a.search svg,
-      a.car svg {
+      p.account svg,
+      p.search svg,
+      p.car svg {
         width: 1.7rem;
       }
     }
   }
 }
 
-a.spacing {
+p.spacing {
   padding: 0 0.5rem;
 }
 
-a.hover-brd-bottom:hover {
+p.hover-brd-bottom:hover {
   border-bottom: 2px solid var(--color-primary);
 }

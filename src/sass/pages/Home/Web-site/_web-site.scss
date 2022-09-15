@@ -1,0 +1,65 @@
+@use "../../../abstracts/mixins" as mx;
+
+section.web-sites {
+  margin-top: 8rem;
+  div.web-sites-container {
+    padding: 0 clamp(2rem, -26.12rem + 37.5vw, 7.63rem);
+  }
+}
+
+div.web-sites-card-container {
+  @include mx.breakpoint(medium) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @include mx.breakpoint(large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+div.web-site {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 2.5rem 1.5rem;
+  margin-bottom: 2rem;
+
+  div.web-site-points {
+    display: flex;
+    flex-direction: column;
+    div.points {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      //   background-color: var(--color-primary);
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+
+      img.check {
+        width: 2rem;
+        background-color: white;
+        border-radius: 0.35rem;
+        padding: 0.3rem;
+        overflow: hidden;
+      }
+
+      p.p-point {
+        margin: 0;
+        // color: white;
+      }
+    }
+  }
+
+  div.web-site-image-container {
+    img {
+      margin-inline: auto;
+    }
+  }
+
+  div.web-site-link-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+}

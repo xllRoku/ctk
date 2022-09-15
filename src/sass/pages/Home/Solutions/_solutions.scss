@@ -1,0 +1,81 @@
+@use "../../../abstracts/mixins" as mx;
+
+section.solution {
+  margin-top: 6rem;
+  background-color: var(--bgk-solutions);
+  color: white;
+  padding: 0 1rem;
+
+  div.solution-container {
+    padding: 8rem 0;
+    h2.hd-solution {
+      text-align: center;
+      @include mx.breakpoint(medium) {
+        text-align: initial;
+      }
+    }
+
+    p.p-solution {
+      text-align: center;
+      font-size: clamp(1rem, calc(0.82rem + 0.75vw), 1.5rem);
+      @include mx.breakpoint(large) {
+        text-align: initial;
+      }
+    }
+
+    div.solution-cards {
+      margin-top: 4rem;
+      div.solution-cards-container {
+        display: grid;
+        justify-items: center;
+        @include mx.breakpoint(medium) {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2rem;
+        }
+
+        @include mx.breakpoint(large) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+}
+
+div.solution-card {
+  position: relative;
+  background-color: var(--bgk-card-solutions);
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-rows: 8rem 20rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  max-width: 27.375rem;
+  @include mx.breakpoint(medium) {
+    margin-bottom: 0;
+  }
+
+  div.solution-card-image-container {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+
+  div.solution-card-content {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    background-color: var(--bgk-card-solutions);
+    grid-row: 2 / 3;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    @include mx.breakpoint(medium) {
+      margin-bottom: 0;
+    }
+
+    p.p-card-solution {
+      margin-bottom: 4rem;
+    }
+  }
+}

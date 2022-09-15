@@ -5,10 +5,14 @@
 :root {
   /** ========== colors ========== **/
   --color-primary: #0b9aff;
-  --color-secundary: #00eca4;
+  // --color-primary: #4c85aa;
+  --color-secundary: #4cacaa;
   --color-third: #1d1d1d;
   --color-fifth: rgb(56, 56, 56);
   --color-fourht: #e6f4f1;
+  --color-five: #00eca4;
+  // --color-five: #b1ddd3;
+  // --color-five: #56aa4c;
 
   /** ========== font ========== **/
 
@@ -34,28 +38,28 @@
   /** ===== buttons ===== **/
 
   /** btn locate vehicle **/
-  --bgk-btn--locate-vehicle: #00eca4;
+  --bgk-btn--locate-vehicle: var(--color-five);
   --padding-btn-locate-vehicle: 0.5rem 1rem;
-  --border-bottom-btn-localte-vehicle: 3px solid #0b9aff;
+  --border-bottom-btn-localte-vehicle: 3px solid var(--color-primary);
   --border-radius-btn-localte-vehicle: 5rem;
 
   /** request a quote **/
-  --bgk-btn-request-quote: #00eca4;
+  --bgk-btn-request-quote: var(--color-five);
   --padding-btn-request-quote: 1rem;
   --border-radius-btn-request-quote: 5rem;
-  --border-bottom-btn-request-quote: 3px solid #0b9aff;
+  --border-bottom-btn-request-quote: 3px solid var(--color-primary);
 
   /** more info **/
 
-  --bgk-btn-more-info: #00eca4;
-  --padding-btn-more-info: 0.5rem 1rem;
+  --bgk-btn-more-info: var(--color-five);
+  --padding-btn-more-info: 1rem 1.5rem;
   --border-radius-btn-more-info: 5rem;
-  --border-bottom-btn-more-info: 3px solid #0b9aff;
+  --border-bottom-btn-more-info: 3px solid var(--color-primary);
 
   /** ===== cards ===== **/
 
   /** we offer **/
-  --bgk-point: #0b9aff;
+  --bgk-point: var(--color-primary);
   --color-point: white;
   --bgk-card-we-offer: white;
 
@@ -63,5 +67,6 @@
   --bgk-card-us-services: white;
 
   /** solutions **/
-  --bkg-card-solutions: var(--color-fifth);
+  --bgk-solutions: var(--color-third);
+  --bgk-card-solutions: var(--color-fifth);
 }
