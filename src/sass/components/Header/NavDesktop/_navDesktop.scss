@@ -1,0 +1,62 @@
+@use "../../../abstracts/mixins" as mx;
+
+ul.navbar-desktop {
+  display: none;
+
+  @include mx.breakpoint(large) {
+    display: flex;
+    padding: 2rem clamp(2rem, calc(-26.12rem + 37.5vw), 7.63rem);
+    justify-content: space-between;
+  }
+
+  div.container-logo-desktop {
+    width: 4rem;
+  }
+}
+
+div.container-navbar-desktop {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div.links-container-desktop {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    margin-left: 2rem;
+
+    li.links-desktop {
+      margin: 0 0.5rem;
+
+      a.link-desktop {
+        font-weight: 500;
+        transition: border-bottom 50ms;
+      }
+    }
+  }
+
+  div.user {
+    div.container-user {
+      display: flex;
+
+      li {
+        margin: 0 0.5rem;
+      }
+
+      a.account svg,
+      a.search svg,
+      a.car svg {
+        width: 1.7rem;
+      }
+    }
+  }
+}
+
+a.spacing {
+  padding: 0 0.5rem;
+}
+
+a.hover-brd-bottom:hover {
+  border-bottom: 2px solid var(--color-primary);
+}

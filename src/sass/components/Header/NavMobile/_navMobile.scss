@@ -1,0 +1,52 @@
+@use "../../../abstracts/mixins" as mx;
+
+ul.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 2rem clamp(0.94rem, calc(0.03rem + 3.88vw), 2.94rem);
+
+  @include mx.breakpoint(large) {
+    display: none;
+  }
+
+  img.logo {
+    width: 4rem;
+  }
+
+  div.menu {
+    svg.menu-icon {
+      width: 3rem;
+    }
+  }
+}
+
+div.container-links {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  background-color: white;
+  padding: 1rem 0;
+
+  li.links {
+    margin: 0.5rem 0;
+
+    a.link {
+      padding: 1rem;
+      color: black;
+    }
+  }
+}
+
+ul.navbar.bg-white {
+  background-color: white;
+}
+
+div.container-links.notShow {
+  display: none;
+}

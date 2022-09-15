@@ -1,0 +1,59 @@
+@use "../../../abstracts/mixins" as mx;
+
+div.container-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+
+  @include mx.breakpoint(large) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 clamp(2rem, -26.12rem + 37.5vw, 7.63rem);
+  }
+
+  div.hero-container-image {
+    max-width: 30rem;
+    @include mx.breakpoint(large) {
+      max-width: 35rem;
+      animation: move 2.5s linear infinite;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(30px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+section.control-taken {
+  margin-top: 3rem;
+  @include mx.breakpoint(large) {
+    margin-top: 0;
+  }
+
+  div.taken-content {
+    text-align: center;
+    max-width: 65rem;
+    @include mx.breakpoint(large) {
+      max-width: 36rem;
+      text-align: initial;
+    }
+
+    p.p-taken {
+      font-size: clamp(1rem, calc(0.91rem + 0.38vw), 1.25rem);
+      margin-bottom: 2rem;
+      @include mx.breakpoint(large) {
+        font-size: 1.2rem;
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}
