@@ -1,0 +1,60 @@
+@use "../../../../../../abstracts/mixins" as mx;
+div.container-sign {
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  @include mx.breakpoint(large) {
+    padding: 0 5rem;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+  }
+  div.container-form-sing {
+    p {
+      text-align: center;
+    }
+  }
+}
+
+form.form-sign {
+  div.email,
+  div.password,
+  div.username {
+    display: flex;
+    background-color: #e8e8e8;
+    padding: 1rem;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+
+    input {
+      width: 100%;
+      outline: none;
+      &::placeholder {
+        font-weight: 700;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  div.container-sign {
+    display: flex;
+    justify-content: center;
+    input {
+      border: 2px solid var(--color-five);
+      padding: 1rem 4rem;
+      border-radius: 5rem;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.5s;
+      &:hover {
+        color: white;
+        background-color: var(--color-five);
+      }
+      &::placeholder {
+        font-weight: 700;
+      }
+    }
+  }
+}

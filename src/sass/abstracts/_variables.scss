@@ -7,7 +7,7 @@
   /** ========== colors ========== **/
   // --color-primary: #0b9aff;
   // --color-primary: #4c85aa;
-  --color-primary: #ff6900;
+  --color-five: #ff6900;
   // --color-secundary: #4cacaa;
   --color-secundary: #ff6900;
   --color-third: #1d1d1d;
@@ -16,7 +16,7 @@
   // --color-five: #00eca4;
   // --color-five: #b1ddd3;
   // --color-five: #56aa4c;
-  --color-five: #9147ff;
+  --color-primary: #9147ff;
 
   /** ========== font ========== **/
 
@@ -45,14 +45,14 @@
   /** btn locate vehicle **/
   --bgk-btn--locate-vehicle: var(--color-five);
   --padding-btn-locate-vehicle: 0.5rem 1rem;
-  --border-bottom-btn-localte-vehicle: 3px solid var(--color-primary);
+  // --border-bottom-btn-localte-vehicle: 3px solid var(--color-primary);
   --border-radius-btn-localte-vehicle: 5rem;
 
   /** request a quote **/
   --bgk-btn-request-quote: var(--color-five);
   --padding-btn-request-quote: 1rem;
   --border-radius-btn-request-quote: 5rem;
-  --border-bottom-btn-request-quote: 3px solid var(--color-primary);
+  // --border-bottom-btn-request-quote: 3px solid var(--color-primary);
 
   /** more info **/
 

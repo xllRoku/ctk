@@ -1,1 +1,1 @@
-export * from "./PrimaryLayout";
+export * from "./primary_layout";

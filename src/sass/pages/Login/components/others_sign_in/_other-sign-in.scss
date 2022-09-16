@@ -1,0 +1,13 @@
+.sign-top {
+  h2 {
+    font-size: 2.8rem;
+  }
+  div.social-media {
+    display: flex;
+    justify-content: center;
+    div.facebook,
+    div.gmail {
+      padding: 0 1rem;
+    }
+  }
+}
