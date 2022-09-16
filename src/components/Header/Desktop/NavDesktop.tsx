@@ -1,16 +1,11 @@
+import { Link } from "react-router-dom";
 import { NavigationContextType } from "@/context/navigation/types";
 import { useScroll } from "@/hooks/useScroll";
 import logo from "../../../assets/images/logo.svg";
+import { scrollToSection } from "../utils/scrollToSection";
 
 const NavDesktop = () => {
   const { home, solution, webs } = useScroll() as NavigationContextType;
-
-  const scrollToSection = (elementRef: any) => {
-    window.scrollTo({
-      top: elementRef.current.offsetTop,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <ul className="navbar-desktop">
@@ -18,26 +13,36 @@ const NavDesktop = () => {
         className="container-logo-desktop"
         onClick={() => scrollToSection(home)}
       >
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
       </div>
       <div className="container-navbar-desktop">
         <div className="links-container-desktop">
           <li className="links-desktop" onClick={() => scrollToSection(home)}>
-            <p className="link-desktop spacing hover-brd-bottom">Inicio</p>
+            <Link to="/">
+              <p className="link-desktop spacing hover-brd-bottom">Inicio</p>
+            </Link>
           </li>
           <li
             className="links-desktop"
             onClick={() => scrollToSection(solution)}
           >
-            <p className="link-desktop spacing hover-brd-bottom">Soluciones</p>
+            <Link to="/">
+              <p className="link-desktop spacing hover-brd-bottom">
+                Soluciones
+              </p>
+            </Link>
           </li>
           <li className="links-desktop">
-            <p
-              className="link-desktop spacing hover-brd-bottom"
-              onClick={() => scrollToSection(webs)}
-            >
-              Plataformas
-            </p>
+            <Link to="/">
+              <p
+                className="link-desktop spacing hover-brd-bottom"
+                onClick={() => scrollToSection(webs)}
+              >
+                Plataformas
+              </p>
+            </Link>
           </li>
           <li className="links-desktop">
             <p className="link-desktop spacing hover-brd-bottom">Productos</p>
@@ -54,22 +59,24 @@ const NavDesktop = () => {
         <div className="user">
           <div className="container-user">
             <li>
-              <p className="account">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
-                  />
-                </svg>
-              </p>
+              <Link to="/login">
+                <p className="account">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
+                    />
+                  </svg>
+                </p>
+              </Link>
             </li>
             <li>
               <p className="search">

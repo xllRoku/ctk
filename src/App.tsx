@@ -1,11 +1,11 @@
 import { ScrollProvider } from "./context/navigation/ScrollProvider";
-import { Home } from "./pages";
+import Router from "./router/Router";
 
 function App() {
   return (
     <>
       <ScrollProvider>
-        <Home />
+        <Router />
       </ScrollProvider>
     </>
   );

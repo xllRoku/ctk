@@ -1,11 +1,11 @@
+import { Outlet } from "react-router-dom";
 import { Header } from "@/components";
-import Props from "@/interface/props";
 
-const Layout = ({ children }: Props) => {
+const Layout = () => {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main>{<Outlet />}</main>
     </>
   );
 };

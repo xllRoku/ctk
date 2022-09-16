@@ -2,6 +2,8 @@
 
 ul.navbar-desktop {
   display: none;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
 
   @include mx.breakpoint(large) {
     display: flex;
@@ -50,6 +52,7 @@ div.container-navbar-desktop {
       p.search svg,
       p.car svg {
         width: 1.7rem;
+        cursor: pointer;
       }
     }
   }

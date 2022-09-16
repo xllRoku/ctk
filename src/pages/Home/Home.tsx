@@ -8,13 +8,11 @@ import { WhyUs } from "./Why-us";
 const Home = () => {
   return (
     <>
-      <Layout>
-        <Hero />
-        <WeOffer />
-        <WhyUs />
-        <Solutions />
-        <WebSites />
-      </Layout>
+      <Hero />
+      <WeOffer />
+      <WhyUs />
+      <Solutions />
+      <WebSites />
     </>
   );
 };
