@@ -1,11 +1,7 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import { LocationContextType } from "@/context/location/types";
 import { LocationProps } from "@/interface/LocationProps";
-import { Layout } from "@/layouts";
+import Layout from "@/layouts/primary_layout/Layout";
 import Home from "@/pages/home/Home";
 import Account from "@/pages/login/Account";
-// import { Home } from "@/pages";
-// import Account from "@/pages/Login/Account";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
