@@ -1,12 +1,12 @@
 // import hero_img from "../../../../assets/images/hero-image-2.png";
-import hero_img from "../../../../assets/images/hero-image-2.png";
+// import hero_img from "../../../../assets/images/hero-image-2.png";
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="container-hero">
         <div className="hero-container-image">
-          <img src={hero_img} alt="hero image" className="hero-image" />
+<!--           <img src={hero_img} alt="hero image" className="hero-image" /> -->
         </div>
 
         <section className="control-taken">
