@@ -1,7 +1,7 @@
 @use "../../../abstracts/mixins" as mx;
 
 section.we-offer {
-  margin-top: 10rem;
+  margin-top: 14rem;
 }
 
 div.why-offer-container {
@@ -18,8 +18,8 @@ div.why-offer-container {
       margin-bottom: 2rem;
       background-color: white;
       border-radius: 0.5rem;
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-        0 2px 4px -2px rgb(0 0 0 / 0.1);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.1);
       @include mx.breakpoint(large) {
         display: flex;
         align-items: center;

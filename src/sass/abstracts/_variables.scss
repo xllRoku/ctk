@@ -1,24 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Roboto:wght@400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 
 :root {
   /** ========== colors ========== **/
-  --color-primary: #0b9aff;
+  // --color-primary: #0b9aff;
   // --color-primary: #4c85aa;
-  --color-secundary: #4cacaa;
+  --color-primary: #ffbc00;
+  // --color-secundary: #4cacaa;
+  --color-secundary: #ffbc00;
   --color-third: #1d1d1d;
   --color-fifth: rgb(56, 56, 56);
   --color-fourht: #e6f4f1;
-  --color-five: #00eca4;
+  // --color-five: #00eca4;
   // --color-five: #b1ddd3;
   // --color-five: #56aa4c;
+  --color-five: #9147ff;
 
   /** ========== font ========== **/
 
   /** ===== family ===== **/
 
-  --font-family-body: "Noto Sans", sans-serif;
+  // --font-family-body: "Noto Sans", sans-serif;
+  --font-family-body: "Oswald", sans-serif;
   --font-family-heading: "Dosis", sans-serif;
   --font-family-p: "Ubuntu", sans-serif;
 

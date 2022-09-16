@@ -1,5 +1,9 @@
 @use "../../../abstracts/mixins" as mx;
 
+section.hero {
+  margin-top: 10rem;
+}
+
 div.container-hero {
   display: flex;
   flex-direction: column;
@@ -43,7 +47,7 @@ section.control-taken {
     text-align: center;
     max-width: 65rem;
     @include mx.breakpoint(large) {
-      max-width: 36rem;
+      max-width: 42rem;
       text-align: initial;
     }
 
