@@ -41,16 +41,16 @@ form.form-sign {
     display: flex;
     justify-content: center;
     input {
-      border: 2px solid var(--color-five);
+      border: 2px solid var(--color-primary);
       padding: 1rem 4rem;
       border-radius: 5rem;
       font-weight: 700;
       font-size: 1rem;
+      color: white;
       cursor: pointer;
       transition: background-color 0.5s;
       &:hover {
-        color: white;
-        background-color: var(--color-five);
+        background-color: var(--color-primary);
       }
       &::placeholder {
         font-weight: 700;

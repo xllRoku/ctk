@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@hookform/resolvers': ^2.9.8
   '@reduxjs/toolkit': ^1.8.5
   '@types/node': ^18.7.18
   '@types/react': ^18.0.17
@@ -11,21 +12,28 @@ specifiers:
   npm: ^8.19.2
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-hook-form: ^7.35.0
   react-router-dom: ^6.4.0
+  react-use-form-state: ^0.13.2
   redux: ^4.2.0
   sass: ^1.54.9
   typescript: ^4.6.4
   vite: ^3.1.0
+  zod: ^3.19.1
 
 dependencies:
+  '@hookform/resolvers': 2.9.8_react-hook-form@7.35.0
   '@reduxjs/toolkit': 1.8.5_react@18.2.0
   '@types/react-router-dom': 5.3.3
   install: 0.13.0
   npm: 8.19.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-hook-form: 7.35.0_react@18.2.0
   react-router-dom: 6.4.0_biqbaboplfbrettd7655fr4n2y
+  react-use-form-state: 0.13.2_biqbaboplfbrettd7655fr4n2y
   redux: 4.2.0
+  zod: 3.19.1
 
 devDependencies:
   '@types/node': 18.7.18
@@ -320,6 +328,14 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@hookform/resolvers/2.9.8_react-hook-form@7.35.0:
+    resolution: {integrity: sha512-iVVjH0USq+1TqDdGkWe2M1x7Wn5OFPgVRo7CbWFsXTqqXqCaZtZcnzJu+UhljCWbthFWxWGXKLGYUDPZ04oVvQ==}
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: 7.35.0_react@18.2.0
+    dev: false
 
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}
@@ -1014,6 +1030,15 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-hook-form/7.35.0_react@18.2.0:
+    resolution: {integrity: sha512-9CYdOed+Itbiu5VMVxW0PK9mBR3f0gDGJcZEyUSm0eJbDymQ913TRs2gHcQZZmfTC+rtxyDFRuelMxx/+xwMcw==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-refresh/0.14.0:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
     engines: {node: '>=0.10.0'}
@@ -1039,6 +1064,16 @@ packages:
     dependencies:
       '@remix-run/router': 1.0.0
       react: 18.2.0
+    dev: false
+
+  /react-use-form-state/0.13.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-bP2H5V6bBFZCJIrbpUcahvJX/f5rGueOvIjg818sq3wg0aX6BFz70u81yhaSg2aCZq0aF3R8eMc2MRWIjr5yhw==}
+    peerDependencies:
+      react: ^16.8.0
+      react-dom: ^16.8.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react/18.2.0:
@@ -1196,3 +1231,7 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
+
+  /zod/3.19.1:
+    resolution: {integrity: sha512-LYjZsEDhCdYET9ikFu6dVPGp2YH9DegXjdJToSzD9rO6fy4qiRYFoyEYwps88OseJlPyl2NOe2iJuhEhL7IpEA==}
+    dev: false

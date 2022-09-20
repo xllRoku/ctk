@@ -19,21 +19,8 @@ div.container-hero {
   div.hero-container-image {
     max-width: 30rem;
     @include mx.breakpoint(large) {
-      max-width: 45rem;
-      // animation: move 2.5s linear infinite;
+      max-width: 65rem;
     }
-
-    // @keyframes move {
-    //   0% {
-    //     transform: translateY(0);
-    //   }
-    //   50% {
-    //     transform: translateY(30px);
-    //   }
-    //   100% {
-    //     transform: translateY(0);
-    //   }
-    // }
   }
 }
 

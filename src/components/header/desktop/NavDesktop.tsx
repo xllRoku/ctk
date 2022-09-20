@@ -1,23 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { NavigationContextType } from "@/context/navigation/types";
 import { useScroll } from "@/hooks/useScroll";
 import logo from "../../../assets/images/logo.svg";
-// import { scrollToSection } from "../utils/scrollToSection";
 import { LocationProps } from "@/interface/LocationProps";
 import { scrollToSection } from "../utils/scrollToSection";
 
 const NavDesktop = ({ location, setLocation }: LocationProps) => {
-  // const { animeSelected, setAnimeSelected } =
-  //   useLocationPath() as LocationContextType;
-  const { home, solution, webs } = useScroll() as NavigationContextType;
-
-  const path = !location && "sign-in";
+  const { home, webs, solution, currentLocation } =
+    useScroll() as NavigationContextType;
+  const navigate = useNavigate();
 
   return (
     <ul className="navbar-desktop">
       <div
         className="container-logo-desktop"
-        onClick={() => scrollToSection(home)}
+        onClick={() => scrollToSection(home, navigate, currentLocation)}
       >
         <Link to="/">
           <img src={logo} alt="logo" />
@@ -25,30 +22,31 @@ const NavDesktop = ({ location, setLocation }: LocationProps) => {
       </div>
       <div className="container-navbar-desktop">
         <div className="links-container-desktop">
-          <li className="links-desktop" onClick={() => scrollToSection(home)}>
+          <li
+            className="links-desktop"
+            onClick={() => scrollToSection(home, navigate, currentLocation)}
+          >
             <Link to="/">
               <p className="link-desktop spacing hover-brd-bottom">Inicio</p>
             </Link>
           </li>
           <li
             className="links-desktop"
-            onClick={() => scrollToSection(solution)}
+            onClick={() => scrollToSection(solution, navigate, currentLocation)}
           >
-            <Link to="/">
-              <p className="link-desktop spacing hover-brd-bottom">
-                Soluciones
-              </p>
-            </Link>
+            {/* <Link> */}
+            <p className="link-desktop spacing hover-brd-bottom">Soluciones</p>
+            {/* </Link> */}
           </li>
           <li className="links-desktop">
-            <Link to="/">
-              <p
-                className="link-desktop spacing hover-brd-bottom"
-                onClick={() => scrollToSection(webs)}
-              >
-                Plataformas
-              </p>
-            </Link>
+            {/* <Link to="/"> */}
+            <p
+              className="link-desktop spacing hover-brd-bottom"
+              onClick={() => scrollToSection(webs, navigate, currentLocation)}
+            >
+              Plataformas
+            </p>
+            {/* </Link> */}
           </li>
           <li className="links-desktop">
             <p className="link-desktop spacing hover-brd-bottom">Productos</p>
@@ -68,7 +66,6 @@ const NavDesktop = ({ location, setLocation }: LocationProps) => {
               <Link
                 to="/account/sign-in"
                 onClick={() => {
-                  console.log("LOOOOOOOOOOOOOOL");
                   setLocation("sign-in");
                 }}
               >

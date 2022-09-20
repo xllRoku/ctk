@@ -5,18 +5,17 @@
 
 :root {
   /** ========== colors ========== **/
-  // --color-primary: #0b9aff;
-  // --color-primary: #4c85aa;
-  --color-five: #ff6900;
-  // --color-secundary: #4cacaa;
-  --color-secundary: #ff6900;
+  --color-primary: #0b9aff;
+  --color-secundary: #00eca4;
   --color-third: #1d1d1d;
-  --color-fifth: rgb(56, 56, 56);
-  --color-fourht: #e6f4f1;
-  // --color-five: #00eca4;
+  --color-fifth: #2c2c2c;
+  --color-five: #ff6900;
+  // --color-secundary: #ff6900;
+  // --color-primary: #4c85aa;
+  // --color-secundary: #4cacaa;
   // --color-five: #b1ddd3;
   // --color-five: #56aa4c;
-  --color-primary: #9147ff;
+  // --color-primary: #9147ff;
 
   /** ========== font ========== **/
 
@@ -24,8 +23,8 @@
 
   // --font-family-body: "Noto Sans", sans-serif;
   --font-family-body: "Oswald", sans-serif;
-  --font-family-heading: "Dosis", sans-serif;
-  --font-family-p: "Ubuntu", sans-serif;
+  // --font-family-heading: "Dosis", sans-serif;
+  // --font-family-p: "Ubuntu", sans-serif;
 
   /** ===== heading ===== **/
 
@@ -40,36 +39,42 @@
 
   /** ========== templeating ========== ***/
 
+  --bgk-body: var(--color-fifth);
+
+  --bgk-nav: var(--color-third);
+
   /** ===== buttons ===== **/
 
   /** btn locate vehicle **/
-  --bgk-btn--locate-vehicle: var(--color-five);
+  --bgk-btn--locate-vehicle: var(--color-primary);
   --padding-btn-locate-vehicle: 0.5rem 1rem;
   // --border-bottom-btn-localte-vehicle: 3px solid var(--color-primary);
   --border-radius-btn-localte-vehicle: 5rem;
 
   /** request a quote **/
-  --bgk-btn-request-quote: var(--color-five);
+  --bgk-btn-request-quote: var(--color-primary);
   --padding-btn-request-quote: 1rem;
   --border-radius-btn-request-quote: 5rem;
   // --border-bottom-btn-request-quote: 3px solid var(--color-primary);
 
   /** more info **/
 
-  --bgk-btn-more-info: var(--color-five);
+  --bgk-btn-more-info: var(--color-primary);
   --padding-btn-more-info: 1rem 1.5rem;
   --border-radius-btn-more-info: 5rem;
-  --border-bottom-btn-more-info: 3px solid var(--color-primary);
+  // --border-bottom-btn-more-info: 3px solid var(--color-secundary);
 
   /** ===== cards ===== **/
 
+  --bgk-cards: var(--color-third);
+  --border-cards: 3px solid var(--color-third);
+
   /** we offer **/
-  --bgk-point: var(--color-primary);
+  --bgk-point: var(--color-secundary);
   --color-point: white;
   --bgk-card-we-offer: white;
 
   /** us services **/
-  --bgk-card-us-services: white;
 
   /** solutions **/
   --bgk-solutions: var(--color-third);
