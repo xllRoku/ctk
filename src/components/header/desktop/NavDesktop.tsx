@@ -50,7 +50,10 @@ const NavDesktop = ({ location, setLocation }: LocationProps) => {
             <p className="link-desktop spacing hover-brd-bottom">Soporte</p>
           </li>
           <li className="links-desktop">
-            <a href="#" className="link-desktop btn-locate-vehicle">
+            <a
+              href="https://gps.controltaken.com/modern/login"
+              className="link-desktop btn-locate-vehicle"
+            >
               Ubicar Vehiculo
             </a>
           </li>

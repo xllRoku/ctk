@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ModalIsOpenProvider from "./context/navigation/ModalIsOpen/ModalIsOpenProvider";
 import { ScrollProvider } from "./context/navigation/ScrollProvider";
 import Router from "./router/Router";
 
@@ -8,7 +9,9 @@ function App() {
   return (
     <>
       <ScrollProvider>
-        <Router location={location} setLocation={setLocation} />
+        <ModalIsOpenProvider>
+          <Router location={location} setLocation={setLocation} />
+        </ModalIsOpenProvider>
       </ScrollProvider>
     </>
   );

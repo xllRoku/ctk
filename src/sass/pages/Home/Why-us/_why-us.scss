@@ -5,7 +5,7 @@ section.reasons {
 }
 
 div.reasons-container {
-  padding: 0 clamp(1rem, -43rem + 60vw, 11rem);
+  padding: var(--space-sides);
 
   @include mx.breakpoint(medium) {
     display: grid;

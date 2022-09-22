@@ -1,0 +1,34 @@
+div.container-modal {
+  width: 100rem;
+  display: flex;
+  justify-content: center;
+  form.modal-form {
+    width: 40%;
+  }
+
+  div.container-name,
+  div.container-email,
+  div.container-phone,
+  div.container-id,
+  div.container-ciudad {
+    width: 100%;
+    border: 2px solid black;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  div.message textarea {
+    width: 100%;
+  }
+
+  div.container-name input,
+  div.container-email input,
+  div.container-phone input,
+  div.container-id input,
+  div.container-ciudad input {
+    outline: none;
+    width: 100%;
+    height: 2rem;
+  }
+}

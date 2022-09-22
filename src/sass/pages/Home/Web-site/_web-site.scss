@@ -3,7 +3,7 @@
 section.web-sites {
   margin-top: 8rem;
   div.web-sites-container {
-    padding: 0 clamp(2rem, -26.12rem + 37.5vw, 7.63rem);
+    padding: var(--space-sides);
   }
 }
 

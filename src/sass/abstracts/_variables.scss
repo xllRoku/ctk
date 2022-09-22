@@ -37,6 +37,8 @@
   /** h3 **/
   --color-hd-3: var(--color-secundary);
 
+  --space-sides: 0 clamp(1rem, -26.12rem + 37.5vw, 7.63rem);
+
   /** ========== templeating ========== ***/
 
   --bgk-body: var(--color-fifth);

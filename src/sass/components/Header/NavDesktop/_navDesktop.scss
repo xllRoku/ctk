@@ -8,7 +8,9 @@ ul.navbar-desktop {
 
   @include mx.breakpoint(large) {
     display: flex;
-    padding: 1rem clamp(2rem, calc(-26.12rem + 37.5vw), 7.63rem);
+    padding: var(--space-sides);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     justify-content: space-between;
   }
 
