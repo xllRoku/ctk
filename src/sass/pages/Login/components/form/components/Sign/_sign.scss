@@ -1,15 +1,7 @@
 @use "../../../../../../abstracts/mixins" as mx;
 div.container-sign {
-  padding: 0 1rem;
   margin-bottom: 2rem;
-  @include mx.breakpoint(large) {
-    padding: 0 5rem;
-    margin-bottom: 0;
-  }
 
-  h2 {
-    font-size: 2.8rem;
-  }
   div.container-form-sing {
     p {
       text-align: center;
@@ -18,6 +10,12 @@ div.container-sign {
 }
 
 form.form-sign {
+  div.container-email,
+  div.container-password,
+  div.container-username {
+    margin-bottom: 1rem;
+  }
+
   div.email,
   div.password,
   div.username {
@@ -25,7 +23,6 @@ form.form-sign {
     background-color: #e8e8e8;
     padding: 1rem;
     gap: 0.5rem;
-    margin-bottom: 1rem;
     border-radius: 0.5rem;
 
     input {
@@ -57,4 +54,7 @@ form.form-sign {
       }
     }
   }
+}
+div.error {
+  border: 2px solid red;
 }

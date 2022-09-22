@@ -18,7 +18,7 @@ const Account = ({ location, setLocation }: LocationProps) => {
   return (
     <section className="login">
       <div className="container-login">
-        <div>
+        <div className="content-login">
           <OthersSingIn location={location} />
           <Form location={location} />
         </div>

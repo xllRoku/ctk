@@ -1,7 +1,14 @@
 import { useState } from "react";
 import logo from "../../../assets/images/logo.svg";
+import menu from "../../../assets/images/icon-white.png";
+import { Link } from "react-router-dom";
+import { NavigationContextType } from "@/context/navigation/types";
+import { useScroll } from "@/hooks/useScroll";
+import { scrollToSection } from "../utils/scrollToSection";
 
 const NavMobile = () => {
+  const { home, webs, solution, currentLocation } =
+    useScroll() as NavigationContextType;
   const [isShow, setIsShow] = useState(false);
 
   const showMenu = () => {
@@ -14,49 +21,32 @@ const NavMobile = () => {
         <img src={logo} alt="" className="logo" />
       </div>
       <div className="menu" onClick={showMenu}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          className="menu-icon"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-          />
-        </svg>
+        <img src={menu} alt="" />
         <div
           className={`${
             isShow ? "container-links" : "container-links notShow"
           }`}
         >
-          <li className="links">
-            <a href="#" className="link">
-              INICIO
-            </a>
+          <li className="links" onClick={() => scrollToSection(home)}>
+            <Link to="/">
+              <p className="link">INICIO</p>
+            </Link>
+          </li>
+          <li className="links" onClick={() => scrollToSection(solution)}>
+            <p className="link">SOLUCIONES</p>
+          </li>
+          <li className="links" onClick={() => scrollToSection(webs)}>
+            <p>PLATAFORMAS</p>
           </li>
           <li className="links">
-            <a href="#" className="link">
-              SOLUCIONES
-            </a>
+            <Link to="/">
+              <p className="link">PRODUCTOS</p>
+            </Link>
           </li>
           <li className="links">
-            <a href="#" className="link">
-              PLATAFORMAS
-            </a>
-          </li>
-          <li className="links">
-            <a href="#" className="link">
-              PRODUCTOS
-            </a>
-          </li>
-          <li className="links">
-            <a href="#" className="link">
-              SOPORTE
-            </a>
+            <Link to="/">
+              <p className="link">SOPORTE</p>
+            </Link>
           </li>
           <li className="links">
             <a

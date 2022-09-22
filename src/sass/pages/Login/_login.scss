@@ -1,29 +1,49 @@
 @use "../../abstracts/mixins" as mx;
 section.login {
-  .container-login {
-    @include mx.breakpoint(large) {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      padding: 0 5rem;
-      margin-top: 8rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 clamp(1rem, calc(-26.12rem + 37.5vw), 7.63rem);
+  padding-top: 22rem;
+  @media (min-width: 1440px) {
+    padding-top: 0;
+  }
+
+  div.container-login {
+    @media (min-width: 1440px) {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+    div.content-login {
+      @media (min-width: 1440px) {
+        width: 700px;
+        flex-grow: 1;
+      }
+
+      // @include mx.breakpoint(medium) {
+      // }
     }
   }
 
   div.panel {
-    background-color: var(--color-secundary);
     color: white;
-    border-radius: 0.5rem;
+    @include mx.breakpoint(medium) {
+      max-width: 745px;
+    }
+
     div.container-panel {
-      padding: 1rem;
-      @include mx.breakpoint(large) {
-        padding: 4rem;
-      }
+      padding: 2rem;
+      background-color: var(--color-secundary);
+      border-radius: 0.5rem;
 
       & > p {
         text-align: center;
         font-size: 2rem;
         color: white;
-        @include mx.breakpoint(large) {
+        @media (min-width: 1440px) {
           font-size: 2.5rem;
         }
       }

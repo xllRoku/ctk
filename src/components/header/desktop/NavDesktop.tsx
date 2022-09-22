@@ -14,7 +14,7 @@ const NavDesktop = ({ location, setLocation }: LocationProps) => {
     <ul className="navbar-desktop">
       <div
         className="container-logo-desktop"
-        onClick={() => scrollToSection(home, navigate, currentLocation)}
+        onClick={() => scrollToSection(home)}
       >
         <Link to="/">
           <img src={logo} alt="logo" />
@@ -22,31 +22,26 @@ const NavDesktop = ({ location, setLocation }: LocationProps) => {
       </div>
       <div className="container-navbar-desktop">
         <div className="links-container-desktop">
-          <li
-            className="links-desktop"
-            onClick={() => scrollToSection(home, navigate, currentLocation)}
-          >
+          <li className="links-desktop" onClick={() => scrollToSection(home)}>
             <Link to="/">
               <p className="link-desktop spacing hover-brd-bottom">Inicio</p>
             </Link>
           </li>
           <li
             className="links-desktop"
-            onClick={() => scrollToSection(solution, navigate, currentLocation)}
+            onClick={() => scrollToSection(solution)}
           >
             {/* <Link> */}
             <p className="link-desktop spacing hover-brd-bottom">Soluciones</p>
             {/* </Link> */}
           </li>
           <li className="links-desktop">
-            {/* <Link to="/"> */}
             <p
               className="link-desktop spacing hover-brd-bottom"
-              onClick={() => scrollToSection(webs, navigate, currentLocation)}
+              onClick={() => scrollToSection(webs)}
             >
               Plataformas
             </p>
-            {/* </Link> */}
           </li>
           <li className="links-desktop">
             <p className="link-desktop spacing hover-brd-bottom">Productos</p>
