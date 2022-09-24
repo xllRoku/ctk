@@ -1,7 +1,7 @@
 @use "../../../abstracts/mixins" as mx;
 
 section.reasons {
-  margin-top: 10rem;
+  margin-top: var(--space-400);
 }
 
 div.reasons-container {
@@ -11,22 +11,20 @@ div.reasons-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
-    gap: 2rem;
+    gap: var(--gap-100);
   }
 
   @include mx.breakpoint(large) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
   }
 
   div.reason {
     position: relative;
     background-color: var(--bgk-cards);
-    margin-bottom: 4rem;
+    margin-bottom: calc(var(--gap-100) * 2);
     border-radius: 0.5rem;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
       0 8px 10px -6px rgb(0 0 0 / 0.1);
-    // border: var(--border-cards);
   }
 }
 

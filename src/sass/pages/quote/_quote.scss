@@ -1,12 +1,15 @@
 @use "../../abstracts/mixins" as mx;
 
 section.quote {
-  padding-top: 7rem;
+  display: flex;
+  align-items: center;
+  padding: var(--space-sides);
+  justify-content: center;
+  padding-top: var(--space-200);
 
   div.quote-container {
-    padding: var(--space-sides);
-    padding-top: 2rem;
-    padding-bottom: 4rem;
+    width: 100%;
+    padding: var(--space-100) 0;
   }
 
   div.services {

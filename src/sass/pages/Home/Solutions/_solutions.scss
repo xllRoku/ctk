@@ -1,13 +1,13 @@
 @use "../../../abstracts/mixins" as mx;
 
 section.solution {
-  margin-top: 6rem;
+  margin-top: var(--space-400);
   background-color: var(--bgk-solutions);
   color: white;
   padding: 0 1rem;
 
   div.solution-container {
-    padding: 8rem 0;
+    padding: var(--space-300) 0;
     h2.hd-solution {
       text-align: center;
       @include mx.breakpoint(medium) {

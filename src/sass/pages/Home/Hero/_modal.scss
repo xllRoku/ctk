@@ -2,20 +2,21 @@ div.container-modal {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   padding: var(--space-sides);
+  padding-top: var(--space-200);
 
   div.container-modal-form {
     width: 100%;
     background-color: black;
     border-radius: 0.5rem;
+    margin: var(--space-100) 0;
+    padding: var(--space-100);
 
     div.container-modal-form-top {
       display: flex;
       color: white;
       align-items: center;
       justify-content: space-between;
-      padding: 2rem;
       cursor: pointer;
 
       a.back {
@@ -29,7 +30,6 @@ div.container-modal {
 
     form.modal-form {
       width: 50%;
-      padding: 2rem;
       margin-inline: auto;
     }
 

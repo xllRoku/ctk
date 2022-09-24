@@ -10,21 +10,12 @@
   --color-third: #1d1d1d;
   --color-fifth: #2c2c2c;
   --color-five: #ff6900;
-  // --color-secundary: #ff6900;
-  // --color-primary: #4c85aa;
-  // --color-secundary: #4cacaa;
-  // --color-five: #b1ddd3;
-  // --color-five: #56aa4c;
-  // --color-primary: #9147ff;
 
   /** ========== font ========== **/
 
   /** ===== family ===== **/
 
-  // --font-family-body: "Noto Sans", sans-serif;
   --font-family-body: "Oswald", sans-serif;
-  // --font-family-heading: "Dosis", sans-serif;
-  // --font-family-p: "Ubuntu", sans-serif;
 
   /** ===== heading ===== **/
 
@@ -37,7 +28,15 @@
   /** h3 **/
   --color-hd-3: var(--color-secundary);
 
+  /** spacing  **/
+
   --space-sides: 0 clamp(1rem, -26.12rem + 37.5vw, 7.63rem);
+  --space-100: 2rem;
+  --space-200: 5.813rem;
+  --space-300: 8rem;
+  --space-400: 11rem;
+
+  --gap-100: 2rem;
 
   /** ========== templeating ========== ***/
 

@@ -2,19 +2,18 @@
 section.login {
   height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0 clamp(1rem, calc(-26.12rem + 37.5vw), 7.63rem);
-  padding-top: 22rem;
-  @media (min-width: 1440px) {
-    padding-top: 0;
-  }
+  padding-top: var(--space-200);
 
   div.container-login {
+    height: 100%;
+    padding: var(--space-100) 0;
     @media (min-width: 1440px) {
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       gap: 4rem;
     }
     div.content-login {
@@ -22,9 +21,6 @@ section.login {
         width: 700px;
         flex-grow: 1;
       }
-
-      // @include mx.breakpoint(medium) {
-      // }
     }
   }
 
