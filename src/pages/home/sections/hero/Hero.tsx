@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import { useState } from "react";
 import { useModal } from "@/hooks/useModal";
 import { ModalIsOpenContextType } from "@/context/navigation/ModalIsOpen/types";
+import { Link } from "react-router-dom";
 
 Modal.setAppElement("#root");
 
@@ -56,12 +57,13 @@ const Hero = () => {
                   con este, por medio de nuestra aplicación móvil.
                 </p>
                 <div>
-                  <button type="button" onClick={openModal}>
-                    <a href="#" className="btn-request-quote">
-                      Solicita Cotizacion
-                    </a>
+                  <button>
+                    <Link to="/quote">
+                      <p className="btn-request-quote">Solicita Cotizacion</p>
+                    </Link>
                   </button>
-                  <Modal
+
+                  {/* <Modal
                     isOpen={isModalOpen}
                     onAfterOpen={afterOpenModal}
                     onRequestClose={closeModal}
@@ -105,7 +107,7 @@ const Hero = () => {
                         </div>
                       </form>
                     </div>
-                  </Modal>
+                  </Modal> */}
                 </div>
               </div>
             </div>

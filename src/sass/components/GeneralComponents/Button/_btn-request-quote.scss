@@ -1,4 +1,4 @@
-a.btn-request-quote {
+p.btn-request-quote {
   background-color: var(--bgk-btn-request-quote);
   padding: var(--padding-btn-request-quote);
   border-radius: var(--border-radius-btn-request-quote);
@@ -6,4 +6,5 @@ a.btn-request-quote {
   color: white;
   font-weight: 600;
   font-size: 1rem;
+  cursor: pointer;
 }

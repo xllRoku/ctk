@@ -1,34 +1,68 @@
 div.container-modal {
-  width: 100rem;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  form.modal-form {
-    width: 40%;
-  }
+  align-items: center;
+  padding: var(--space-sides);
 
-  div.container-name,
-  div.container-email,
-  div.container-phone,
-  div.container-id,
-  div.container-ciudad {
+  div.container-modal-form {
     width: 100%;
-    border: 2px solid black;
-    margin-bottom: 1rem;
+    background-color: black;
     border-radius: 0.5rem;
-    padding: 0.5rem;
-  }
 
-  div.message textarea {
-    width: 100%;
-  }
+    div.container-modal-form-top {
+      display: flex;
+      color: white;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+      cursor: pointer;
 
-  div.container-name input,
-  div.container-email input,
-  div.container-phone input,
-  div.container-id input,
-  div.container-ciudad input {
-    outline: none;
-    width: 100%;
-    height: 2rem;
+      a.back {
+        color: white;
+      }
+      h2 {
+        width: 100%;
+        margin: 0;
+      }
+    }
+
+    form.modal-form {
+      width: 50%;
+      padding: 2rem;
+      margin-inline: auto;
+    }
+
+    div.container-name,
+    div.container-email,
+    div.container-phone,
+    div.container-id,
+    div.container-ciudad {
+      width: 100%;
+      border: 2px solid white;
+      margin-bottom: 1rem;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+    }
+
+    div.message textarea {
+      width: 100%;
+    }
+
+    div.container-name input,
+    div.container-email input,
+    div.container-phone input,
+    div.container-id input,
+    div.container-ciudad input {
+      outline: none;
+      width: 100%;
+      height: 2rem;
+    }
   }
+}
+
+button.btn-more-detail {
+  background-color: var(--bgk-btn-secundary);
+  padding: 1rem;
+  border-radius: 0.5rem;
 }

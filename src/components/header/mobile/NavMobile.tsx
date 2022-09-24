@@ -18,7 +18,9 @@ const NavMobile = () => {
   return (
     <ul className={`${isShow ? "navbar bg-white" : "navbar"}`}>
       <div className="container-logo">
-        <img src={logo} alt="" className="logo" />
+        <Link to="/">
+          <img src={logo} alt="" className="logo" />
+        </Link>
       </div>
       <div className="menu" onClick={showMenu}>
         <img src={menu} alt="" />

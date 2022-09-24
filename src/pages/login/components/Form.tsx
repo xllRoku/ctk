@@ -3,7 +3,9 @@ import SingUp from "./Form/components/sign_up/SingUp";
 import { LocationLoginProps } from "./Form/interface/LocationLoginProps";
 
 const Form = ({ location }: LocationLoginProps) => {
-  return <>{location === "sign-in" ? <SignIn /> : <SingUp />}</>;
+  return (
+    <>{location === "sign-in" || location === "" ? <SignIn /> : <SingUp />}</>
+  );
 };
 
 export default Form;

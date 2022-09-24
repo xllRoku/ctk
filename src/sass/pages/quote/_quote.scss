@@ -1,0 +1,58 @@
+@use "../../abstracts/mixins" as mx;
+
+section.quote {
+  padding-top: 7rem;
+
+  div.quote-container {
+    padding: var(--space-sides);
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  div.services {
+    display: grid;
+
+    @include mx.breakpoint(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mx.breakpoint(large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    gap: 2rem;
+  }
+}
+
+div.service {
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  background-color: var(--bgk-cards);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  div.service-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    & > p {
+      font-size: 2rem;
+    }
+  }
+  img {
+    width: 6rem;
+  }
+}
+
+a.btn-quote {
+  height: 3.5rem;
+  padding: 0.5rem 2rem;
+  background-color: var(--color-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  p {
+    margin: 0;
+    text-align: center;
+  }
+}

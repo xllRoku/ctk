@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Roboto:wght@400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Roboto:wght@400;700;900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&family=Oswald:wght@300;400;500;600;700&display=swap");
 
 :root {
   /** ========== colors ========== **/
@@ -45,6 +45,8 @@
 
   --bgk-nav: var(--color-third);
 
+  --bgk-btn-secundary: var(--color-secundary);
+
   /** ===== buttons ===== **/
 
   /** btn locate vehicle **/
@@ -61,7 +63,7 @@
 
   /** more info **/
 
-  --bgk-btn-more-info: var(--color-primary);
+  --bgk-btn-more-info: var(--color-secundary);
   --padding-btn-more-info: 1rem 1.5rem;
   --border-radius-btn-more-info: 5rem;
   // --border-bottom-btn-more-info: 3px solid var(--color-secundary);

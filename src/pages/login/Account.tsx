@@ -24,7 +24,7 @@ const Account = ({ location, setLocation }: LocationProps) => {
         </div>
         <div className="panel">
           <div className="container-panel">
-            {location === "sign-in" ? (
+            {location === "sign-in" || location === "" ? (
               <p>
                 Ingresa tus datos personales para empezar a monitorear tu carro
               </p>
@@ -35,7 +35,7 @@ const Account = ({ location, setLocation }: LocationProps) => {
               </p>
             )}
 
-            {location === "sign-in" ? (
+            {location === "sign-in" || location === "" ? (
               <Link
                 to="/account/sign-up"
                 onClick={() => {

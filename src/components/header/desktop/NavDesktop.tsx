@@ -1,14 +1,44 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { NavigationContextType } from "@/context/navigation/types";
 import { useScroll } from "@/hooks/useScroll";
 import logo from "../../../assets/images/logo.svg";
+import search from "../../../assets/images/search.png";
+import cart from "../../../assets/images/cart-w.png";
 import { LocationProps } from "@/interface/LocationProps";
 import { scrollToSection } from "../utils/scrollToSection";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
-const NavDesktop = ({ location, setLocation }: LocationProps) => {
-  const { home, webs, solution, currentLocation } =
-    useScroll() as NavigationContextType;
-  const navigate = useNavigate();
+const NavDesktop = ({ setLocation }: LocationProps) => {
+  const { home, webs, solution } = useScroll() as NavigationContextType;
+
+  const [isHoveringAccount, setIsHoveringAccount] = useState(false);
+  const [isHoveringSearch, setIsHoveringSearch] = useState(false);
+  const [isHoveringCart, setIsHoveringCart] = useState(false);
+
+  const handleMouseOverAccount = () => {
+    setIsHoveringAccount(true);
+  };
+
+  const handleMouseOutAccount = () => {
+    setIsHoveringAccount(false);
+  };
+
+  const handleMouseOverSearch = () => {
+    setIsHoveringSearch(true);
+  };
+
+  const handleMouseOutSearch = () => {
+    setIsHoveringSearch(false);
+  };
+
+  const handleMouseOverCart = () => {
+    setIsHoveringCart(true);
+  };
+
+  const handleMouseOutCart = () => {
+    setIsHoveringCart(false);
+  };
 
   return (
     <ul className="navbar-desktop">
@@ -60,67 +90,52 @@ const NavDesktop = ({ location, setLocation }: LocationProps) => {
         </div>
         <div className="user">
           <div className="container-user">
-            <li>
+            <motion.li
+              animate={{
+                width: isHoveringAccount ? "5.5rem" : "2rem",
+                height: "3rem",
+                overflow: isHoveringAccount ? "inital" : "hidden",
+              }}
+              onMouseOver={handleMouseOverAccount}
+              onMouseOut={handleMouseOutAccount}
+              className="account"
+            >
               <Link
                 to="/account/sign-in"
                 onClick={() => {
                   setLocation("sign-in");
                 }}
               >
-                <p className="account">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    className="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
-                    />
-                  </svg>
-                </p>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABIklEQVRIie3VMUoDQRTG8W9SZBslKVIoWyt4gXgML5JYeA5RvIMewEuYhBQJFtppqV3ELCn9WzhCWKP7xryA4H4wzc7j/WYGZlaq8xcDZMAxMASKOIZAH8g2hebAlO8zAXJvNKtAl3G/ncfjtabnCY8S4IGlZzDCc0lbxnUWIYRtLxgj+tE0hMq+DWOvIsF9tRRZ4bsE2FRrhS8T4KuE2p8T7/HEeI+bbnDE8wrc/+VawptADxgA8zhu4jffndbxivXlakjqSjqSdCjpQFI7Ts8k3UsaSbqWNA4hvK21KmAXOAOeE34ST8ApsPMbsA1cAIsEsJwFcA60rOg+8LgGWM4DsGeBbx3Rz0zLzqq3umM6mrR86bkKPpH04ojOYs86/yzv5x2Nqq3T2YwAAAAASUVORK5CYII=" />
+                <p>Account</p>
               </Link>
-            </li>
-            <li>
-              <p className="search">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                  />
-                </svg>
-              </p>
-            </li>
-            <li>
-              <p className="car">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-                  />
-                </svg>
-              </p>
-            </li>
+            </motion.li>
+            <motion.li
+              animate={{
+                width: isHoveringSearch ? "5.5rem" : "2rem",
+                height: "3rem",
+                overflow: isHoveringSearch ? "inital" : "hidden",
+              }}
+              onMouseOver={handleMouseOverSearch}
+              onMouseOut={handleMouseOutSearch}
+              className="search"
+            >
+              <img src={search} alt="" />
+              <p>Buscar</p>
+            </motion.li>
+            <motion.li
+              animate={{
+                width: isHoveringCart ? "5.5rem" : "2rem",
+                height: "3rem",
+                overflow: isHoveringCart ? "inital" : "hidden",
+              }}
+              onMouseOver={handleMouseOverCart}
+              onMouseOut={handleMouseOutCart}
+              className="car"
+            >
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABK0lEQVRIie2WMUoDQRSG/6eprIQIklY8gVaeQINg7SFyhJzGM2hhAkK0SGFhZ6skFoFIihQJSuSzcBaH6G5MZme3iF/3Zh58879lh5HWEuCOb56B8zLEADNgvxC5d4gLJ28WLT5z4m7R4i1gAnwAu7E8G/MLZjaR1HF7x7HEvwI0iMNt4viR2HEVKdNeptjMniQ9RhC3M8WOGKlLESPpJikstQsqkoaStnMSP5jZQVKkJjazmaTrnKSS1PKLrFFL+Y677Repo5YkYEfSQNJmoHQqqWpm02QhM7GZvUq6D5RKUseXLhQ7LnMQtxa3zAHUgHHANTkCqisdFzgCusD7EsI3vh4YhytJ1xfgFHgB+kA9tG8Zcd/7fr3Qvr/8TuUC1F2aHnAS2vdPYXwCfvKh5P72KzUAAAAASUVORK5CYII=" />
+              <p>$0</p>
+            </motion.li>
           </div>
         </div>
       </div>

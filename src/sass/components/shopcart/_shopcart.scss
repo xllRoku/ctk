@@ -1,0 +1,93 @@
+div.floating-cart {
+  button.cart-floating-button {
+    width: 3.5rem;
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    background-color: var(--color-primary);
+    border-radius: 5rem;
+    padding: 0.8rem;
+    cursor: pointer;
+    z-index: 1000;
+  }
+}
+
+div.cart {
+  display: none;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  color: black;
+  background-image: linear-gradient(rgb(0 0 0 / 0.6), rgb(0 0 0 / 0.6));
+  transition: all 10s;
+}
+
+div.cart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1rem;
+  transition: width 1s;
+  overflow-x: hidden;
+
+  h2 {
+    margin: 0;
+    font-size: 1.75rem;
+    color: black;
+    text-align: initial;
+  }
+
+  div.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5rem;
+    div.close {
+      cursor: pointer;
+    }
+  }
+
+  div.products {
+    height: 100%;
+  }
+
+  div.shipping {
+    div.shipping-total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      border-top: 1px solid black;
+      padding-top: 0.5rem;
+
+      p {
+        margin: 0;
+        color: black;
+        font-size: 2rem;
+      }
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+button.btn-checkout {
+  width: 100%;
+  background-color: var(--color-primary);
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+div.show {
+  display: flex;
+  position: fixed;
+  z-index: 11000;
+}

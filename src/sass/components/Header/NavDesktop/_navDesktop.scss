@@ -3,8 +3,6 @@
 ul.navbar-desktop {
   display: none;
   background-color: var(--bgk-nav);
-  // box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
-  //   0 8px 10px -6px rgb(0 0 0 / 0.1);
 
   @include mx.breakpoint(large) {
     display: flex;
@@ -52,11 +50,31 @@ div.container-navbar-desktop {
         margin: 0 0.5rem;
       }
 
-      p.account svg,
-      p.search svg,
-      p.car svg {
-        width: 1.7rem;
+      li.account {
+        border-radius: 0.5rem;
+        background-color: var(--bgk-body);
+
+        a {
+          display: flex;
+          align-items: center;
+          transition: width 5s;
+          img {
+            width: 2rem;
+          }
+        }
+      }
+
+      li.search,
+      li.car {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: var(--bgk-body);
+        border-radius: 0.5rem;
         cursor: pointer;
+        img {
+          width: 2rem;
+        }
       }
     }
   }
