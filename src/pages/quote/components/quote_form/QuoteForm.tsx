@@ -12,19 +12,24 @@ const QuoteForm = () => {
         </div>
         <form className="modal-form">
           <div className="container-name">
-            <input type="text" placeholder="Nombre" />
+            <label>Nombre</label>
+            <input type="text" placeholder="Nombre..." />
           </div>
           <div className="container-email">
-            <input type="text" placeholder="Correo electronico" />
+            <label>Email</label>
+            <input type="text" placeholder="Correo electronico..." />
           </div>
           <div className="container-phone">
-            <input type="text" placeholder="Teléfono" />
+            <label>Telefono</label>
+            <input type="text" placeholder="Teléfono..." />
           </div>
           <div className="container-id">
-            <input type="text" name="" placeholder="Cedula o nit" />
+            <label>Cédula o nit</label>
+            <input type="text" name="" placeholder="Cedula o nit..." />
           </div>
           <div className="container-ciudad">
-            <input type="text" placeholder="ciudad" />
+            <label>Ciudad</label>
+            <input type="text" placeholder="Ciudad..." />
           </div>
           <div className="message">
             <textarea name="" id="" cols={30} rows={10}></textarea>

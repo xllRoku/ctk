@@ -1,5 +1,4 @@
 div.container-modal {
-  height: 100vh;
   display: flex;
   justify-content: center;
   padding: var(--space-sides);
@@ -30,6 +29,7 @@ div.container-modal {
 
     form.modal-form {
       width: 50%;
+      height: 100%;
       margin-inline: auto;
     }
 
@@ -39,24 +39,30 @@ div.container-modal {
     div.container-id,
     div.container-ciudad {
       width: 100%;
-      border: 2px solid white;
       margin-bottom: 1rem;
       border-radius: 0.5rem;
-      padding: 0.5rem;
+      label {
+        color: white;
+        font-size: 1.75rem;
+      }
+
+      input {
+        height: 2rem;
+        padding: 2rem 1rem;
+        border: 2px solid white;
+        border-radius: 0.5rem;
+        width: 100%;
+        font-size: 1.25rem;
+        color: white;
+        &::placeholder {
+          color: white;
+          font-size: 1.25rem;
+        }
+      }
     }
 
     div.message textarea {
       width: 100%;
-    }
-
-    div.container-name input,
-    div.container-email input,
-    div.container-phone input,
-    div.container-id input,
-    div.container-ciudad input {
-      outline: none;
-      width: 100%;
-      height: 2rem;
     }
   }
 }
