@@ -23,40 +23,85 @@ div.container-modal {
       }
       h2 {
         width: 100%;
-        margin: 0;
       }
     }
 
-    form.modal-form {
-      width: 50%;
-      height: 100%;
-      margin-inline: auto;
-    }
+    div.content-form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gap-100);
 
-    div.container-name,
-    div.container-email,
-    div.container-phone,
-    div.container-id,
-    div.container-ciudad {
-      width: 100%;
-      margin-bottom: 1rem;
-      border-radius: 0.5rem;
-      label {
-        color: white;
-        font-size: 1.75rem;
+      div.quote-selected {
+        margin-top: var(--space-100);
+
+        div.quote-selected-container {
+          width: 80%;
+          margin-inline: auto;
+          background-color: var(--bgk-body);
+          border-radius: 0.5rem;
+          padding: 0.5rem;
+          img {
+            width: 20rem;
+            margin-inline: auto;
+          }
+          p {
+            font-size: 2rem;
+            text-align: center;
+            color: var(--color-secundary);
+          }
+        }
       }
 
-      input {
-        height: 2rem;
-        padding: 2rem 1rem;
-        border: 2px solid white;
-        border-radius: 0.5rem;
+      form.modal-form {
         width: 100%;
-        font-size: 1.25rem;
-        color: white;
-        &::placeholder {
+        height: 100%;
+        margin-inline: auto;
+      }
+
+      div.container-name,
+      div.container-email,
+      div.container-phone,
+      div.container-id,
+      div.container-ciudad {
+        width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+        label {
           color: white;
+          font-size: 1.75rem;
+        }
+
+        input {
+          height: 2rem;
+          padding: 2rem 1rem;
+          border: 2px solid white;
+          border-radius: 0.5rem;
+          width: 100%;
           font-size: 1.25rem;
+          color: white;
+          &::placeholder {
+            color: white;
+            font-size: 1.25rem;
+          }
+        }
+      }
+
+      div.message {
+        label {
+          color: white;
+          font-size: 1.75rem;
+        }
+        textarea {
+          border-radius: 0.5rem;
+        }
+      }
+
+      div.send {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        input {
+          width: 10rem;
         }
       }
     }
@@ -64,11 +109,11 @@ div.container-modal {
     div.message textarea {
       width: 100%;
     }
-  }
-}
 
-button.btn-more-detail {
-  background-color: var(--bgk-btn-secundary);
-  padding: 1rem;
-  border-radius: 0.5rem;
+    p {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 1.75rem;
+    }
+  }
 }

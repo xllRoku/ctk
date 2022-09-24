@@ -8,7 +8,7 @@ const Quote = () => {
         <h2>Nuestros servicios</h2>
         <div className="services">
           {quotes.map(({ title, image, path }) => (
-            <QuoteCard title={title} image={image} path={path} />
+            <QuoteCard key={title} title={title} image={image} path={path} />
           ))}
         </div>
       </div>
