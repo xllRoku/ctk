@@ -33,7 +33,7 @@ div.container-navbar-desktop {
     li.links-desktop {
       margin: 0 0.5rem;
 
-      p.link-desktop {
+      a.link-desktop {
         font-weight: 500;
         transition: border-bottom 50ms;
         color: white;
@@ -80,10 +80,10 @@ div.container-navbar-desktop {
   }
 }
 
-p.spacing {
+a.spacing {
   padding: 0 0.5rem;
 }
 
-p.hover-brd-bottom:hover {
+a.hover-brd-bottom:hover {
   border-bottom: 2px solid var(--color-primary);
 }

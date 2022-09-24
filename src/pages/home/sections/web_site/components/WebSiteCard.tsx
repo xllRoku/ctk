@@ -27,11 +27,9 @@ const WebSiteCard = ({
         <p>{description}</p>
       </div>
       <div className="web-site-link-container">
-        <button>
-          <a href="#" className="btn-more-info">
-            Más Información
-          </a>
-        </button>
+        <a href="#" className="button-secundary">
+          Más Información
+        </a>
       </div>
     </div>
   );

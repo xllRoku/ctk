@@ -53,36 +53,37 @@ const NavDesktop = ({ setLocation }: LocationProps) => {
       <div className="container-navbar-desktop">
         <div className="links-container-desktop">
           <li className="links-desktop" onClick={() => scrollToSection(home)}>
-            <Link to="/">
-              <p className="link-desktop spacing hover-brd-bottom">Inicio</p>
+            <Link to="/" className="link-desktop spacing hover-brd-bottom">
+              Inicio
             </Link>
           </li>
           <li
             className="links-desktop"
             onClick={() => scrollToSection(solution)}
           >
-            {/* <Link> */}
-            <p className="link-desktop spacing hover-brd-bottom">Soluciones</p>
-            {/* </Link> */}
+            <Link to="/" className="link-desktop spacing hover-brd-bottom">
+              Soluciones
+            </Link>
           </li>
-          <li className="links-desktop">
-            <p
-              className="link-desktop spacing hover-brd-bottom"
-              onClick={() => scrollToSection(webs)}
-            >
+          <li className="links-desktop" onClick={() => scrollToSection(webs)}>
+            <Link to="/" className="link-desktop spacing hover-brd-bottom">
               Plataformas
-            </p>
+            </Link>
           </li>
           <li className="links-desktop">
-            <p className="link-desktop spacing hover-brd-bottom">Productos</p>
+            <Link to="/" className="link-desktop spacing hover-brd-bottom">
+              Productos
+            </Link>
           </li>
           <li className="links-desktop">
-            <p className="link-desktop spacing hover-brd-bottom">Soporte</p>
+            <Link to="/" className="link-desktop spacing hover-brd-bottom">
+              Soporte
+            </Link>
           </li>
           <li className="links-desktop">
             <a
               href="https://gps.controltaken.com/modern/login"
-              className="link-desktop btn-locate-vehicle"
+              className="link-desktop button-primary"
             >
               Ubicar Vehiculo
             </a>

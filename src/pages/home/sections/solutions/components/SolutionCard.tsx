@@ -10,11 +10,9 @@ const SolutionCard = ({ title, description, image }: CardSolutionProps) => {
         <h3>{title}</h3>
         <p className="p-card-solution">{description}</p>
         <div className="container-btn-solution">
-          <button>
-            <a href="#" className="btn-more-info">
-              Mas información
-            </a>
-          </button>
+          <a href="#" className="button-secundary">
+            Mas información
+          </a>
         </div>
       </div>
     </div>
