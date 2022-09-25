@@ -7,10 +7,6 @@ section.web-sites {
   }
 }
 
-div.web-sites-card-container {
-  @include mx.grilla();
-}
-
 div.web-site {
   background-color: var(--bgk-cards);
   border-radius: 0.5rem;
@@ -27,7 +23,6 @@ div.web-site {
       display: flex;
       align-items: center;
       gap: 1rem;
-      //   background-color: var(--color-primary);
       border-radius: 0.5rem;
       margin-bottom: 0.5rem;
 
@@ -40,7 +35,6 @@ div.web-site {
 
       p.p-point {
         margin: 0;
-        // color: white;
       }
     }
   }

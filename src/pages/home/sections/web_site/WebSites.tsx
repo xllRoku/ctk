@@ -11,7 +11,7 @@ const WebSites = () => {
       <div className="web-sites-container">
         <h2>Plataforma Web</h2>
         <div className="web-sites-cards">
-          <div className="web-sites-card-container">
+          <div className="web-sites-card-container grilla">
             {web_sites.map(({ title, image, points, description }) => (
               <WebSiteCard
                 key={title}

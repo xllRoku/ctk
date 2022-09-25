@@ -19,7 +19,7 @@ const Solutions = () => {
           propiamente.
         </p>
         <div className="solution-cards">
-          <div className="solution-cards-container">
+          <div className="solution-cards-container grilla">
             {solutions.map(({ title, description, image }) => (
               <SolutionCard
                 key={title}

@@ -28,8 +28,6 @@ section.solution {
       div.solution-cards-container {
         display: grid;
         justify-items: center;
-
-        @include mx.grilla();
       }
     }
   }

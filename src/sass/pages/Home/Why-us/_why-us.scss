@@ -7,7 +7,7 @@ section.reasons {
 ul.reasons-container {
   padding: var(--space-sides);
 
-  @include mx.grilla();
+  // @include mx.grilla();
 
   li.reason {
     position: relative;

@@ -5,7 +5,7 @@ const WhyUs = () => {
   return (
     <section className="reasons">
       <h2>¿Por qué escoger nuestros servicios?</h2>
-      <ul className="reasons-container">
+      <ul className="reasons-container grilla">
         {why_us.map(({ title, description, image }) => (
           <Reason
             key={title}
