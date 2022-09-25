@@ -18,8 +18,6 @@ ul.navbar {
 
   div.menu {
     width: 3rem;
-    // svg.menu-icon {
-    // }
   }
 }
 
@@ -27,13 +25,13 @@ div.container-links {
   width: 100%;
   position: absolute;
   left: 0;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   margin-top: 1rem;
   background-color: var(--bgk-nav);
   padding: 1rem 0;
-  transition: 0.5s ease-in;
+  transition: height 250ms;
 
   li.links {
     margin: 0.5rem 0;
@@ -49,6 +47,6 @@ ul.navbar.bg-white {
   background-color: var(--bgk-nav);
 }
 
-div.container-links.notShow {
-  display: none;
+div.notShow {
+  display: none !important;
 }

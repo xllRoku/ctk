@@ -1,5 +1,4 @@
 import Props from "@/interface/props";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import useWindowDimensions from "@/hooks/useWindowsDimension";
 import { useShopCart } from "@/hooks/shop_cart/useShopCart";

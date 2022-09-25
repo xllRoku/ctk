@@ -1,10 +1,11 @@
 import { useState } from "react";
-import logo from "../../../assets/images/logo.svg";
-import menu from "../../../assets/images/icon-white.png";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { NavigationContextType } from "@/context/navigation/types";
 import { useScroll } from "@/hooks/navigation/useScroll";
 import { scrollToSection } from "../utils/scrollToSection";
+import logo from "../../../assets/images/logo.svg";
+import menu from "../../../assets/images/icon-white.png";
 
 const NavMobile = () => {
   const { home, webs, solution, currentLocation } =
@@ -23,11 +24,12 @@ const NavMobile = () => {
         </Link>
       </div>
       <div className="menu" onClick={showMenu}>
-        <img src={menu} alt="" />
-        <div
-          className={`${
-            isShow ? "container-links" : "container-links notShow"
-          }`}
+        <img src={menu} alt="icon menu" />
+        <motion.div
+          animate={{
+            height: isShow ? "450px" : "0",
+          }}
+          className={`${isShow ? "" : "notShow"} container-links `}
         >
           <li className="links" onClick={() => scrollToSection(home)}>
             <Link to="/">
@@ -53,13 +55,13 @@ const NavMobile = () => {
           <li className="links">
             <a
               href="https://gps.controltaken.com/"
-              className="btn-locate-vehicle"
+              className="button-primary"
               target="_blank"
             >
               UBICAR VEHICULO
             </a>
           </li>
-        </div>
+        </motion.div>
       </div>
     </ul>
   );
