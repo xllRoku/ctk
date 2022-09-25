@@ -8,8 +8,7 @@ import logo from "../../../assets/images/logo.svg";
 import menu from "../../../assets/images/icon-white.png";
 
 const NavMobile = () => {
-  const { home, webs, solution, currentLocation } =
-    useScroll() as NavigationContextType;
+  const { home, webs, solution } = useScroll() as NavigationContextType;
   const [isShow, setIsShow] = useState(false);
 
   const showMenu = () => {
@@ -23,23 +22,50 @@ const NavMobile = () => {
           <img src={logo} alt="" className="logo" />
         </Link>
       </div>
-      <div className="menu" onClick={showMenu}>
-        <img src={menu} alt="icon menu" />
+      <div className="menu">
+        <button onClick={showMenu}>
+          <img src={menu} alt="icon menu" />
+        </button>
+
         <motion.div
           animate={{
             height: isShow ? "450px" : "0",
           }}
           className={`${isShow ? "" : "notShow"} container-links `}
         >
-          <li className="links" onClick={() => scrollToSection(home)}>
+          <li
+            className="links"
+            onClick={() => {
+              showMenu();
+              setTimeout(() => {
+                scrollToSection(home);
+              }, 100);
+            }}
+          >
             <Link to="/">
               <p className="link">INICIO</p>
             </Link>
           </li>
-          <li className="links" onClick={() => scrollToSection(solution)}>
+          <li
+            className="links"
+            onClick={() => {
+              showMenu();
+              setTimeout(() => {
+                scrollToSection(solution);
+              }, 100);
+            }}
+          >
             <p className="link">SOLUCIONES</p>
           </li>
-          <li className="links" onClick={() => scrollToSection(webs)}>
+          <li
+            className="links"
+            onClick={() => {
+              showMenu();
+              setTimeout(() => {
+                scrollToSection(webs);
+              }, 100);
+            }}
+          >
             <p>PLATAFORMAS</p>
           </li>
           <li className="links">
