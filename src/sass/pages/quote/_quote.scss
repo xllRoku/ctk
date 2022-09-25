@@ -13,16 +13,7 @@ section.quote {
   }
 
   div.services {
-    display: grid;
-
-    @include mx.breakpoint(medium) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include mx.breakpoint(large) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-    gap: 2rem;
+    @include mx.grilla();
   }
 }
 

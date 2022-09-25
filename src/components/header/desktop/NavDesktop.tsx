@@ -1,13 +1,15 @@
-import { Link } from "react-router-dom";
 import { NavigationContextType } from "@/context/navigation/types";
 import { useScroll } from "@/hooks/useScroll";
 import logo from "../../../assets/images/logo.svg";
 import search from "../../../assets/images/search.png";
-import cart from "../../../assets/images/cart-w.png";
+// import cart from "../../../assets/images/cart-w.png";
 import { LocationProps } from "@/interface/LocationProps";
 import { scrollToSection } from "../utils/scrollToSection";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { links } from "@/data/link/links";
+import CustomLink from "../components/link/CustomLink";
+import { Link } from "react-router-dom";
 
 const NavDesktop = ({ setLocation }: LocationProps) => {
   const { home, webs, solution } = useScroll() as NavigationContextType;
@@ -44,7 +46,7 @@ const NavDesktop = ({ setLocation }: LocationProps) => {
     <ul className="navbar-desktop">
       <div
         className="container-logo-desktop"
-        onClick={() => scrollToSection(home)}
+        // onClick={() => scrollToSection(home)}
       >
         <Link to="/">
           <img src={logo} alt="logo" />

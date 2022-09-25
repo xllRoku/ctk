@@ -28,14 +28,8 @@ section.solution {
       div.solution-cards-container {
         display: grid;
         justify-items: center;
-        @include mx.breakpoint(medium) {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 2rem;
-        }
 
-        @include mx.breakpoint(large) {
-          grid-template-columns: repeat(3, 1fr);
-        }
+        @include mx.grilla();
       }
     }
   }

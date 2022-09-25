@@ -2,10 +2,23 @@
 $breakpoints-up: (
   "medium": 48rem,
   "large": 75rem,
+  "extra-large": 90rem,
 );
 
 @mixin breakpoint($size) {
   @media (min-width: map-get($breakpoints-up, $size)) {
     @content;
+  }
+}
+
+@mixin grilla() {
+  @media (min-width: 48rem) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  @media (min-width: 75rem) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

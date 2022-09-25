@@ -8,15 +8,7 @@ section.web-sites {
 }
 
 div.web-sites-card-container {
-  @include mx.breakpoint(medium) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--gap-100);
-  }
-
-  @include mx.breakpoint(large) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  @include mx.grilla();
 }
 
 div.web-site {

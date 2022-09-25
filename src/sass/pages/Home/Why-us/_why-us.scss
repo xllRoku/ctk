@@ -7,16 +7,7 @@ section.reasons {
 div.reasons-container {
   padding: var(--space-sides);
 
-  @include mx.breakpoint(medium) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
-    gap: var(--gap-100);
-  }
-
-  @include mx.breakpoint(large) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  @include mx.grilla();
 
   div.reason {
     position: relative;
