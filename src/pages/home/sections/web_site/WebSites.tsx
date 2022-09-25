@@ -1,5 +1,5 @@
 import { web_sites } from "@/data/web_site/web_sites";
-import { useScroll } from "@/hooks/useScroll";
+import { useScroll } from "@/hooks/navigation/useScroll";
 import { NavigationContextType } from "@/context/navigation/types";
 import WebSiteCard from "./components/WebSiteCard";
 

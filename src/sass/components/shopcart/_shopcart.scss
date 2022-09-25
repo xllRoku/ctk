@@ -9,6 +9,16 @@ div.floating-cart {
     padding: 0.8rem;
     cursor: pointer;
     z-index: 1000;
+    span {
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      background-color: var(--color-secundary);
+      color: white;
+      font-size: 0.8rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 100vw;
+    }
   }
 }
 

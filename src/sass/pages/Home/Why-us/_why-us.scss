@@ -4,12 +4,12 @@ section.reasons {
   margin-top: var(--space-400);
 }
 
-div.reasons-container {
+ul.reasons-container {
   padding: var(--space-sides);
 
   @include mx.grilla();
 
-  div.reason {
+  li.reason {
     position: relative;
     background-color: var(--bgk-cards);
     margin-bottom: calc(var(--gap-100) * 2);

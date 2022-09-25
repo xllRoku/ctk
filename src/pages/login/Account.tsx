@@ -3,7 +3,7 @@ import { LocationProps } from "@/interface/LocationProps";
 import { Link } from "react-router-dom";
 import Form from "./components/Form";
 import OthersSingIn from "./components/others_sign_in/OthersSingIn";
-import { useScroll } from "@/hooks/useScroll";
+import { useScroll } from "@/hooks/navigation/useScroll";
 import { NavigationContextType } from "@/context/navigation/types";
 import { useEffect } from "react";
 

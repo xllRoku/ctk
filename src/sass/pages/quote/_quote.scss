@@ -12,12 +12,12 @@ section.quote {
     padding: var(--space-100) 0;
   }
 
-  div.services {
+  ul.services {
     @include mx.grilla();
   }
 }
 
-div.service {
+li.service {
   display: grid;
   justify-items: center;
   gap: 1rem;

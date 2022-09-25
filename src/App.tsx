@@ -1,6 +1,7 @@
 import { useState } from "react";
-import ModalIsOpenProvider from "./context/navigation/ModalIsOpen/ModalIsOpenProvider";
 import { ScrollProvider } from "./context/navigation/ScrollProvider";
+import SelectedServiceProvider from "./context/selected_service/SelectedServiceProvider";
+import ShopCartProvider from "./context/shop_cart/ShopCartProvider";
 import Router from "./router/Router";
 
 function App() {
@@ -9,9 +10,11 @@ function App() {
   return (
     <>
       <ScrollProvider>
-        <ModalIsOpenProvider>
-          <Router location={location} setLocation={setLocation} />
-        </ModalIsOpenProvider>
+        <SelectedServiceProvider>
+          <ShopCartProvider>
+            <Router location={location} setLocation={setLocation} />
+          </ShopCartProvider>
+        </SelectedServiceProvider>
       </ScrollProvider>
     </>
   );

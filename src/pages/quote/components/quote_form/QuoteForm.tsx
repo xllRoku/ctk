@@ -1,8 +1,18 @@
+import { SelectedServiceContextType } from "@/context/selected_service/types";
+import { useSelectedService } from "@/hooks/selected_service/useSelectedService";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import tractocamion from "../../../../assets/images/quote/tractocamion.svg";
-import QuoteCard from "../quote_card/QuoteCard";
 
 const QuoteForm = () => {
+  const { selectedService } =
+    useSelectedService() as SelectedServiceContextType;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
+  const { title, image } = selectedService;
+
   return (
     <div className="container-modal">
       <div className="container-modal-form">
@@ -15,17 +25,10 @@ const QuoteForm = () => {
         <div className="content-form">
           <div className="quote-selected">
             <div className="quote-selected-container">
-              <img src={tractocamion} alt="tractocamion" />
-              <p>Servicio de tractocamion</p>
+              <img src={image} alt="tractocamion" />
+              <p>{title}</p>
             </div>
           </div>
-
-          {/* <QuoteCard
-            key="Rastreo de motos"
-            title="Rastreo de motos"
-            image={tractocamion}
-            path="motocicly"
-          /> */}
           <form className="modal-form">
             <div className="container-name">
               <label>Nombre</label>

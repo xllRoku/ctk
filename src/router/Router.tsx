@@ -15,13 +15,12 @@ const Router = ({ location, setLocation }: LocationProps) => {
           path="/"
           element={<Layout location={location} setLocation={setLocation} />}
         >
-          <Route path="quote/:path" element={<QuoteForm />} />
           <Route
             path={`account/:path`}
             element={<Account location={location} setLocation={setLocation} />}
           />
+          <Route path="quote/:path" element={<QuoteForm />} />
           <Route path="quote" element={<Quote />} />
-
           <Route index element={<Home />} />
         </Route>
       </Routes>

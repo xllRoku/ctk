@@ -1,5 +1,5 @@
 import { solutions } from "@/data/solutions/solutions";
-import { useScroll } from "@/hooks/useScroll";
+import { useScroll } from "@/hooks/navigation/useScroll";
 import { NavigationContextType } from "@/context/navigation/types";
 import SolutionCard from "./components/SolutionCard";
 

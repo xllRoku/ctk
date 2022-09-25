@@ -2,25 +2,29 @@ import Props from "@/interface/props";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import useWindowDimensions from "@/hooks/useWindowsDimension";
+import { useShopCart } from "@/hooks/shop_cart/useShopCart";
+import { ShopCartContextType } from "@/context/shop_cart/types";
 
 const ShopCart = ({ children }: Props) => {
   const { width } = useWindowDimensions();
-  const [isShow, setIsShow] = useState(false);
+  const { isShopCartOpen, setIsShopCartOpen } =
+    useShopCart() as ShopCartContextType;
 
   return (
     <>
       <div className="floating-cart">
         <button
           className="cart-floating-button"
-          onClick={() => setIsShow(!isShow)}
+          onClick={() => setIsShopCartOpen(!isShopCartOpen)}
         >
+          <span className="amount">0</span>
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABK0lEQVRIie2WMUoDQRSG/6eprIQIklY8gVaeQINg7SFyhJzGM2hhAkK0SGFhZ6skFoFIihQJSuSzcBaH6G5MZme3iF/3Zh58879lh5HWEuCOb56B8zLEADNgvxC5d4gLJ28WLT5z4m7R4i1gAnwAu7E8G/MLZjaR1HF7x7HEvwI0iMNt4viR2HEVKdNeptjMniQ9RhC3M8WOGKlLESPpJikstQsqkoaStnMSP5jZQVKkJjazmaTrnKSS1PKLrFFL+Y677Repo5YkYEfSQNJmoHQqqWpm02QhM7GZvUq6D5RKUseXLhQ7LnMQtxa3zAHUgHHANTkCqisdFzgCusD7EsI3vh4YhytJ1xfgFHgB+kA9tG8Zcd/7fr3Qvr/8TuUC1F2aHnAS2vdPYXwCfvKh5P72KzUAAAAASUVORK5CYII=" />
         </button>
       </div>
-      <div className={`${isShow ? "show" : ""} cart`}>
+      <div className={`${isShopCartOpen ? "show" : ""} cart`}>
         <motion.div
           animate={{
-            width: isShow
+            width: isShopCartOpen
               ? `${width === 375 ? "100" : width === 768 ? "50" : "30"}%`
               : "0",
           }}
@@ -28,7 +32,10 @@ const ShopCart = ({ children }: Props) => {
         >
           <div className="card-top">
             <h2>Mi carro</h2>
-            <div onClick={() => setIsShow(!isShow)} className="close">
+            <div
+              onClick={() => setIsShopCartOpen(!isShopCartOpen)}
+              className="close"
+            >
               <svg
                 fill="#000000"
                 xmlns="http://www.w3.org/2000/svg"

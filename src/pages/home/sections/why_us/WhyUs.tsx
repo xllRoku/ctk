@@ -5,7 +5,7 @@ const WhyUs = () => {
   return (
     <section className="reasons">
       <h2>¿Por qué escoger nuestros servicios?</h2>
-      <div className="reasons-container">
+      <ul className="reasons-container">
         {why_us.map(({ title, description, image }) => (
           <Reason
             key={title}
@@ -14,7 +14,7 @@ const WhyUs = () => {
             image={image}
           />
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

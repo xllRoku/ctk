@@ -2,7 +2,7 @@ import { ReasonProps } from "../interface/ReasonProps";
 
 const Reason = ({ title, description, image }: ReasonProps) => {
   return (
-    <div className="reason">
+    <li className="reason">
       <div className="reason-container">
         <div className="reason-container-image">
           <img src={image} alt="icon" className="integrated-image" />
@@ -12,7 +12,7 @@ const Reason = ({ title, description, image }: ReasonProps) => {
           <p>{description}</p>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 

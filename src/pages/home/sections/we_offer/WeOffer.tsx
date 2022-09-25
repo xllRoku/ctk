@@ -6,11 +6,11 @@ const WeOffer = () => {
     <section className="we-offer">
       <div className="why-offer-container">
         <h2>¿Que ofrecemos?</h2>
-        <div className="points-container">
+        <ol className="points-container">
           {offers.map(({ id, description }) => (
             <Point key={id} id={id} description={description} />
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

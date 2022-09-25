@@ -1,18 +1,19 @@
 import { NavigationContextType } from "@/context/navigation/types";
-import { useScroll } from "@/hooks/useScroll";
+import { useScroll } from "@/hooks/navigation/useScroll";
 import logo from "../../../assets/images/logo.svg";
 import search from "../../../assets/images/search.png";
-// import cart from "../../../assets/images/cart-w.png";
 import { LocationProps } from "@/interface/LocationProps";
 import { scrollToSection } from "../utils/scrollToSection";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { links } from "@/data/link/links";
-import CustomLink from "../components/link/CustomLink";
 import { Link } from "react-router-dom";
+import { useShopCart } from "@/hooks/shop_cart/useShopCart";
+import { ShopCartContextType } from "@/context/shop_cart/types";
 
 const NavDesktop = ({ setLocation }: LocationProps) => {
   const { home, webs, solution } = useScroll() as NavigationContextType;
+  const { isShopCartOpen, setIsShopCartOpen } =
+    useShopCart() as ShopCartContextType;
 
   const [isHoveringAccount, setIsHoveringAccount] = useState(false);
   const [isHoveringSearch, setIsHoveringSearch] = useState(false);
@@ -46,7 +47,7 @@ const NavDesktop = ({ setLocation }: LocationProps) => {
     <ul className="navbar-desktop">
       <div
         className="container-logo-desktop"
-        // onClick={() => scrollToSection(home)}
+        onClick={() => scrollToSection(home)}
       >
         <Link to="/">
           <img src={logo} alt="logo" />
@@ -135,6 +136,7 @@ const NavDesktop = ({ setLocation }: LocationProps) => {
               onMouseOver={handleMouseOverCart}
               onMouseOut={handleMouseOutCart}
               className="car"
+              onClick={() => setIsShopCartOpen(!isShopCartOpen)}
             >
               <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABK0lEQVRIie2WMUoDQRSG/6eprIQIklY8gVaeQINg7SFyhJzGM2hhAkK0SGFhZ6skFoFIihQJSuSzcBaH6G5MZme3iF/3Zh58879lh5HWEuCOb56B8zLEADNgvxC5d4gLJ28WLT5z4m7R4i1gAnwAu7E8G/MLZjaR1HF7x7HEvwI0iMNt4viR2HEVKdNeptjMniQ9RhC3M8WOGKlLESPpJikstQsqkoaStnMSP5jZQVKkJjazmaTrnKSS1PKLrFFL+Y677Repo5YkYEfSQNJmoHQqqWpm02QhM7GZvUq6D5RKUseXLhQ7LnMQtxa3zAHUgHHANTkCqisdFzgCusD7EsI3vh4YhytJ1xfgFHgB+kA9tG8Zcd/7fr3Qvr/8TuUC1F2aHnAS2vdPYXwCfvKh5P72KzUAAAAASUVORK5CYII=" />
               <p>$0</p>

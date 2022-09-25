@@ -3,7 +3,7 @@ import logo from "../../../assets/images/logo.svg";
 import menu from "../../../assets/images/icon-white.png";
 import { Link } from "react-router-dom";
 import { NavigationContextType } from "@/context/navigation/types";
-import { useScroll } from "@/hooks/useScroll";
+import { useScroll } from "@/hooks/navigation/useScroll";
 import { scrollToSection } from "../utils/scrollToSection";
 
 const NavMobile = () => {
