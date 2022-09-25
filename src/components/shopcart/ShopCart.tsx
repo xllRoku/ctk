@@ -24,7 +24,13 @@ const ShopCart = ({ children }: Props) => {
         <motion.div
           animate={{
             width: isShopCartOpen
-              ? `${width === 375 ? "100" : width === 768 ? "50" : "30"}%`
+              ? `${
+                  width >= 375 && width < 768
+                    ? "100"
+                    : width >= 768 && width < 1440
+                    ? "50"
+                    : "30"
+                }%`
               : "0",
           }}
           className="cart-container"
