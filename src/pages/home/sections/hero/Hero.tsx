@@ -1,13 +1,10 @@
 import hero_img from "../../../../assets/images/hero-image-2.png";
-import Modal from "react-modal";
-import { useState } from "react";
-import { ModalIsOpenContextType } from "@/context/navigation/ModalIsOpen/types";
 import { Link } from "react-router-dom";
-
-
+import { useNavOpen } from "@/hooks/navOpen/useNavOpen";
+import { NavOpenContextType } from "@/context/navOpen/types";
 
 const Hero = () => {
-
+  const { navOpen, setNavOpen } = useNavOpen() as NavOpenContextType;
   return (
     <section className="hero">
       <div className="container-hero">
@@ -30,9 +27,15 @@ const Hero = () => {
                   con este, por medio de nuestra aplicación móvil.
                 </p>
                 <div>
-                    <Link to="/quote" className="button-primary">
-                      Solicita Cotizacion
-                    </Link>
+                  <Link
+                    to="/quote"
+                    className="button-primary"
+                    onClick={() => {
+                      if (navOpen) setNavOpen(!navOpen);
+                    }}
+                  >
+                    Solicita Cotizacion
+                  </Link>
                 </div>
               </div>
             </div>
