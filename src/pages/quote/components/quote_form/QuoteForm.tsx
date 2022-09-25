@@ -16,10 +16,10 @@ const QuoteForm = () => {
   return (
     <div className="container-modal">
       <div className="container-modal-form">
+        <Link to="/quote" className="back">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAA8UlEQVRoge3YoUoFQRQG4PEKgibBZBKMNoPVfF/L5gsYfACL2SyoCCo+ge2CySIGg+kz3JlwbbMKB4fztWn/v+zOnplSUkoppZRSSj9gB/e4ic4yGbbxbOkxOs8k2MJtLfGC3ehM3bCJ61pigb3oTN2wgata4hX70Zm6YR2XtcQbDqIzdcMMF7XEOw6jM3XDGs5riQ8cRWfqVkuc1RKfOI7ONAlOa4kvzKPzTIIT/9ddKaXMoh/iH7C6GuHVKmWgj72UQbbfxgg/xMYII0pjhKGxMcIY3xjhYNVYPeo+Ref5FcvLh4c2EqSUUkoppZSifAO0GQdC09EniQAAAABJRU5ErkJggg==" />
+        </Link>
         <div className="container-modal-form-top">
-          <Link to="/quote" className="back">
-            back
-          </Link>
           <h2>COTIZACION</h2>
         </div>
         <div className="content-form">

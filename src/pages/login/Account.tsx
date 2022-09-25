@@ -15,6 +15,10 @@ const Account = ({ location, setLocation }: LocationProps) => {
     setCurrentLocation(curntLocation.pathname);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <section className="login">
       <div className="container-login">

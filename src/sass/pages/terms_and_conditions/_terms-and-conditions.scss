@@ -1,0 +1,25 @@
+div.terms-and-conditions {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: var(--space-sides);
+  padding-top: var(--space-200);
+  text-align: center;
+
+  div.terms-and-conditions-container {
+    padding-top: var(--space-100);
+    p {
+      font-size: 1.75rem;
+    }
+
+    div.links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      font-size: 1.5rem;
+      color: var(--color-primary);
+    }
+  }
+}
