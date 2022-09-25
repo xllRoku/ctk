@@ -6,12 +6,12 @@ div.container-hero {
   align-items: center;
   padding: 0 1rem;
   height: calc(100vh - var(--space-200));
+  padding-top: var(--space-200);
 
   @include mx.breakpoint(large) {
     flex-direction: row-reverse;
     justify-content: space-around;
     padding: 0 clamp(2rem, -26.12rem + 37.5vw, 7.63rem);
-    padding-top: var(--space-200);
   }
 
   div.hero-container-image {
