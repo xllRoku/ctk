@@ -1,3 +1,5 @@
+@use "../../../abstracts/mixins" as mx;
+
 div.container-modal {
   display: flex;
   justify-content: center;
@@ -28,18 +30,23 @@ div.container-modal {
 
     div.content-form {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      @include mx.breakpoint(large) {
+        grid-template-columns: repeat(2, 1fr);
+      }
       gap: var(--gap-100);
 
       div.quote-selected {
         margin-top: var(--space-100);
 
         div.quote-selected-container {
-          width: 80%;
-          margin-inline: auto;
           background-color: var(--bgk-body);
           border-radius: 0.5rem;
           padding: 0.5rem;
+
+          @include mx.breakpoint(medium) {
+            width: 80%;
+            margin-inline: auto;
+          }
           img {
             width: 20rem;
             margin-inline: auto;

@@ -6,7 +6,7 @@ const Quote = () => {
     <section className="quote">
       <div className="quote-container">
         <h2>Nuestros servicios</h2>
-        <ul className="services">
+        <ul className="services grilla">
           {quotes.map(({ title, image, path }) => (
             <QuoteCard key={title} title={title} image={image} path={path} />
           ))}

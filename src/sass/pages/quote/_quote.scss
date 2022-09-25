@@ -13,7 +13,8 @@ section.quote {
   }
 
   ul.services {
-    @include mx.grilla();
+    display: grid;
+    gap: var(--gap-100);
   }
 }
 
